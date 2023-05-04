@@ -58,7 +58,7 @@ class MSRAClient(Client):
                 return f"/{engine}/inference"
 
         self.org_id: Optional[str] = org_id
-        self.api_key: Optional[str] = api_key
+        self.api_key: Optional[str] = True
         self.api_base: str = "https://10.184.185.28:443/query"
         self.completion_attributes = (EngineAPIResource,) + ORIGINAL_COMPLETION_ATTRIBUTES[1:]
 
