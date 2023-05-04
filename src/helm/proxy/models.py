@@ -543,6 +543,14 @@ ALL_MODELS = [
         "It is trained on a filtered subset of the Pile and CommonCrawl.",
         tags=[TEXT_MODEL_TAG, FULL_FUNCTIONALITY_TEXT_MODEL_TAG, GPT2_TOKENIZER_TAG],
     ),
+    Model(
+        group="msra",
+        creator_organization="msra",
+        name="msra/gpt7B",
+        display_name="7B",
+        description="autoregressive language model. ",
+        tags=[TEXT_MODEL_TAG, FULL_FUNCTIONALITY_TEXT_MODEL_TAG, GPT2_TOKENIZER_TAG],
+    ),
     # OpenAI: https://beta.openai.com/docs/engines/gpt-3
     Model(
         group="gpt3",

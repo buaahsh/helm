@@ -32,6 +32,7 @@ from .perspective_api_client import PerspectiveAPIClient
 from .palmyra_client import PalmyraClient
 from .yalm_tokenizer_client import YaLMTokenizerClient
 from .simple_client import SimpleClient
+from .msra_client import MSRAClient
 from helm.proxy.clients.huggingface_model_registry import get_huggingface_model_config
 
 
@@ -89,6 +90,11 @@ class AutoClient(Client):
                     chat_gpt_client=chat_gpt_client,
                     api_key=api_key,
                     org_id=org_id,
+                )
+            elif organization == "msra":
+                client = MSRAClient(
+                    api_key=None,
+                    cache_config=cache_config,
                 )
             elif organization == "AlephAlpha":
                 client = AlephAlphaClient(api_key=self.credentials["alephAlphaKey"], cache_config=cache_config)
