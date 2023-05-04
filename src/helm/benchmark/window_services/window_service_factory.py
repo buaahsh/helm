@@ -91,7 +91,7 @@ class WindowServiceFactory:
                 window_service = LuminousWorldWindowService(service)
             else:
                 raise ValueError(f"Unhandled Aleph Alpha model: {engine}")
-        elif organization == "microsoft":
+        elif organization == "microsoft" or organization == "msra":
             window_service = MTNLGWindowService(service)
         elif organization == "anthropic":
             if engine == "stanford-online-all-v4-s3":
